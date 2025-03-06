@@ -18,7 +18,7 @@ export const AcmeLogo = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      className="w-6 h-6 text-foreground" // Aplicamos el color de texto para el ícono
+      className="w-6 h-6 text-primary dark:text-red-500" // Aplicamos el color de texto para el ícono
     >
       <path 
         className="fill-current" // Esto hace que el ícono use el color de texto actual
@@ -41,16 +41,17 @@ export default function App() {
 
 
   return (
-    <Navbar className="ms-0 bg-background border-b border-primary-500 shadow-md">
+    <Navbar className="ms-0 bg-background shadow-lg">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="hidden"
         />
-        <NavbarBrand className="text-foreground">
-          <AcmeLogo className="h-6 w-6 color-foreground text-foreground" /> {/* Cambié el tamaño aquí */}
-          <p className="font-bold">Materias</p>
-        </NavbarBrand>
+        <NavbarBrand >
+  <AcmeLogo className="h-6 w-6 color-foreground text-foreground" /> {/* Cambié el tamaño aquí */}
+  <p className="px-2 text-2xl font-bold text-primary dark:text-red-500">Materias</p>
+</NavbarBrand>
+
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center" />
@@ -66,20 +67,6 @@ export default function App() {
           </Button>
         </NavbarItem>
       </NavbarContent>
-
-      <NavbarMenu className="bg-background text-foreground">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full text-primary-500 hover:text-primary-700"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
 }

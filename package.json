@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@heroui/react": "^2.7.4",
     "@nextui-org/react": "^2.6.10",
     "@vercel/speed-insights": "^1.1.0",
     "lucide-react": "^0.475.0",
