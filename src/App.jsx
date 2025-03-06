@@ -1,6 +1,6 @@
 import React  from "react";
-import ScheduleGrid from "./components/ScheduleGrid";
-import Navbar from "./components/navbar";
+import ScheduleGrid from "./components/scheduleGrid.jsx";
+import Navbar from "./components/navbar.jsx";
 
 function App() {
   
